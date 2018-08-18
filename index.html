@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,
+        initial-scale=1"> 
+    <title>WorkIn</title>
+    <link type="text/css"
+          rel="stylesheet"
+          href="style.css">
+</head>
+
+
+<body>
+    <div id="entire-website-header"> 
+        <h1>
+        <div class='logo-image'><a href="https://www.google.com"><img 
+            src="icons/logo.png"/ height="65" width="165"></a>
+        </div>
+        <div class='right-header-bar'>
+            <a href="#top" class="button">Home</a>
+            <a href="#about-us" class="button">About Us</a>
+            <a href="#facilities-and-perks" class="button">Facilities and Perks</a>
+            <a href="#prices" class="button">Prices</a>
+            <a href="#follow-us" class="button">Contact Us</a>
+        </div>
+        </h1>
+    </div>
+
+
+    <div class='content'>
+        <div class="slideshow-container">
+            <div class="slideshow">
+                <img src="images/workin_6.jpg" style="width:100%;height:90%">
+            </div>
+
+            <div class="slideshow">
+                <img src="images/workin_12.jpg" style="width:100%;height:90%">
+            </div>
+
+            <div class="slideshow">
+                <img src="images/workin_5.jpg" style="width:100%;height:90%">    
+            </div>
+
+            <div class='intro table-row'>
+                    <p> We are a co-working space with offices and private 
+                    suites for aspiring entrepreneurs and freelancers to 
+                    grow and succeed. 
+                    </p>
+            </div>
+        </div>
+   
+
+
+        <a name="about-us"></a>
+        <div class='table-row'>
+        <h2> About Us </h2>
+        <p class='normal-padding'> We are a community of developers, graphic
+            designers, salespeople, consultants, lawyers, accountants and appraiser
+            that want to create a welcoming environment for startups to thrive in.
+            We are new in the community, being established in August 2018. Located
+            at Ave. Munoz Rivera, we work closely with students from the University
+            of Puerto Rico and the community of Rio Piedras to provide the facilities
+            needed to grow successful businesses and pursue their endeavours. 
+        </p>
+        </div>
+ 
+
+
+        <a name="facilities-and-perks"></a>
+        <div class='table-row'>
+        <h2> Facilities and Perks </h2>
+        <p class='normal-padding'> Our community enjoys many resources that we
+            provide them with: </p>
+        <ul>
+            <li> Fully Furnished </li>
+            <li> Conference Rooms </li>
+            <li> Corporate Address </li>
+            <li> Mailing Service </li>
+            <li> Fiber Optic Internet </li>
+            <li> Parking </li>
+            <li> Coffee </li>
+            <li> Copiers </li>
+        </ul>
+        </div>
+
+
+
+        <a name="prices"></a>
+        <div class='table-row'> 
+        <h2> Prices </h2>
+        <p> Prices to join our community depend how big your team is and what
+            spaces you would all want to use: </p>
+        <ol>
+            <li> Single desk </li>
+            <li> Double desk </li>
+            <li> Table space </li>
+            <li> Office space </li>
+        </ol>
+        <p> All teams have access the conference room for meetings and such. 
+        </p>
+        </div>
+
+
+
+        <a name="contact-us"></a>
+        <div class='table-row'>
+            <h2> Contact Us </h2>
+
+            <div class="mapbox" id="googleMap"></div>
+
+            <div class="box">
+                Email: contact@workin.com <br>
+                Phone number: (787)555-5555 <br>
+                Address: Calle 34, Edificio 4, 3er piso <br>
+                Ave. Munoz Rivera <br>
+                San Juan, PR 00901 <br>
+            </div>
+        </div>
+
+    </div>
+
+    <div class='footer'>
+        <h3 id='follow-us'> Follow us on: </h3>
+        <div> 
+            <a href="https://www.facebook.com" target="_blank"><img
+                src="icons/facebook.png" height="50" width="50" alt="facebook                          icon"/></a> 
+            <a href="https://www.instagram.com" target="_blank"><img 
+                src="icons/instagram.png" height="50 width="50" 
+                alt="instagramicon"/></a>
+            <a href="https://www.twitter.com" target="_blank"><img 
+                src="icons/twitter.png" height="50" width="50" alt="twitter 
+                icon"/></a>
+        </div>
+    </div>
+
+    <script>
+        window.onscroll = function() {stickyOnTop()};
+
+        var header = document.getElementById("entire-website-header");
+        var sticky = header.offsetTop;
+
+        function stickyOnTop() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+        
+
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("slideshow");
+            header.classList.add("sticky");
+            
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 4000); // Change image every 4 seconds
+        }
+    </script>
+
+    <script>
+        function myMap() {
+            var myCenter = new google.maps.LatLng(18.403583,-66.056657);
+            var mapCanvas = document.getElementById("googleMap");
+            var mapOptions = {center: myCenter, zoom: 14, mapTypeControl: true, 
+                mapTypeControlOptions: {
+                    mapTypeIds: [google.maps.MapTypeId.ROADMAP,
+                    google.maps.MapTypeId.SATELLITE]
+                }, streetViewControl: false
+            };
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+            var marker = new google.maps.Marker({position:myCenter});
+            marker.setMap(map);
+            google.maps.event.addListener(marker,'click',function() {
+                var infowindow = new google.maps.InfoWindow({
+                    content:"Come visit us! WorkIn Suites & Co."});
+                infowindow.open(map,marker);
+            });
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg-YWiurLhk4rqBUWAAyaRHDNw9BcSNKc&callback=myMap"></script>
+
+</body>
+
+
+</html>
