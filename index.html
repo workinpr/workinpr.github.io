@@ -13,24 +13,31 @@
 
 
 <body>
-    <div id="entire-website-header"> 
+    <nav id="entire-website-header"> 
         <h1>
         <div class='logo-image'><a href="https://www.google.com"><img 
             src="icons/logo.png"/ height="65" width="165"></a>
         </div>
+
         <div class='right-header-bar'>
             <a href="#top" class="button">Home</a>
             <a href="#about-us" class="button">About Us</a>
             <a href="#facilities-and-perks" class="button">Facilities and Perks</a>
             <a href="#prices" class="button">Prices</a>
-            <a href="#follow-us" class="button">Contact Us</a>
+            <a href="#contact-us" class="button">Contact Us</a>
         </div>
         </h1>
-    </div>
+    </nav>
 
 
     <div class='content'>
-        <div class="slideshow-container">
+        <div class="table-row slideshow-container">
+            <div class='table-row intro'> 
+                <p class='special-intro-font'> Co-Working Space and Private Suites
+                    in San Juan, PR.
+                </p> 
+            </div>
+
             <div class="slideshow" id="top">
                 <img src="images/workin_6.jpg" style="width:100%;height:90%">
             </div>
@@ -42,20 +49,12 @@
             <div class="slideshow">
                 <img src="images/workin_5.jpg" style="width:100%;height:90%">    
             </div>
-
-            <div class='intro table-row'>
-                    <p> We are a co-working space with offices and private 
-                    suites for aspiring entrepreneurs and freelancers to 
-                    grow and succeed. 
-                    </p>
-            </div>
         </div>
    
 
-
-        <a id="about-us"></a>
-        <div class='table-row'>
-        <h2 id="about-us"> About Us </h2>
+        
+        <div class='table-row black-background' id="about-us">
+        <h2>About Us</h2>
         <p class='normal-padding'> We are a community of developers, graphic
             designers, salespeople, consultants, lawyers, accountants and appraiser
             that want to create a welcoming environment for startups to thrive in.
@@ -68,73 +67,146 @@
  
 
 
-        <div class='table-row' id="facilities-and-perks">
-        <h2> Facilities and Perks </h2>
-        <p class='normal-padding'> Our community enjoys many resources that we
-            provide them with: </p>
-        <ul>
-            <li> Fully Furnished </li>
-            <li> Conference Rooms </li>
-            <li> Corporate Address </li>
-            <li> Mailing Service </li>
-            <li> Fiber Optic Internet </li>
-            <li> Parking </li>
-            <li> Coffee </li>
-            <li> Copiers </li>
-        </ul>
+        <div class='container table-row gray-background' id="facilities-and-perks">
+
+            <h2>Facilities and Perks</h2>
+            
+            <div>
+                <div class="perk-box">
+                    <div><img src="icons/fully-furnished.png"></div>
+                    Fully Furnished 
+                </div> 
+
+                <div class="perk-box green-background">
+                    <div><img src="icons/conference-rooms.png"></div>
+                    Conference Rooms
+                </div>
+
+                <div class="perk-box">
+                    <div><img src="icons/corporate-address.png"></div>
+                    Corporate Address
+                </div>
+
+                <div class="perk-box green-background">
+                    <div><img src="icons/mailing-service.png"></div>
+                    Mailing Service
+                </div> 
+            </div> 
+
+            <div> 
+                <div class="perk-box green-background">
+                    <div><img src="icons/fiber-optic-internet.png"></div>
+                    Fiber Optic Internet
+                </div>
+                <div class="perk-box">
+                    <div><img src="icons/parking.png"></div>
+                    Parking
+                </div>
+                <div class="perk-box green-background">
+                    <div><img src="icons/coffee.png"></div>
+                    Coffee
+                </div>
+                <div class="perk-box"><div><img src="icons/copiers.png"></div>
+                    Copiers
+                </div>
+            </div>
+            <p class="extra-bottom-border-facilities"></p>
         </div>
 
 
 
-        <div class='table-row' id="prices"> 
-        <h2> Prices </h2>
-        <p> Prices to join our community depend how big your team is and what
-            spaces you would all want to use: </p>
-        <ol>
-            <li> Single desk </li>
-            <li> Double desk </li>
-            <li> Table space </li>
-            <li> Office space </li>
-        </ol>
-        <p> All teams have access the conference room for meetings and such. 
-        </p>
+        <div class='table-row black-background' id="prices"> 
+            <h2>Prices</h2>
+
+            <div class="pricing-box box1">
+                <h3 id='option-pricing-title'>Co-Working</h3>
+                <p id='starting-at'>Starting at:</p>
+                <p id='starting-price'> $150 </p>
+                <p> 
+                    Ave. Munoz Rivera 898 <br>
+                    Suite 301 <br>
+                    San Juan, PR 00927<br>
+                </p>
+            </div> 
+
+            <div class="pricing-box box2">
+                <h3 id='option-pricing-title'>Private Suites</h3>
+                <p id='starting-at'>Starting at:</p>
+                <p id='starting-price'> $500 </p>
+                <p>
+                    Ave. Munoz Rivera 898 <br>
+                    Suite 301 <br>
+                    San Juan, PR 00927 
+                </p>
+            </div> 
+            <p class="extra-bottom-border-pricing"></p>
         </div>
 
 
 
-        <a name="contact-us"></a>
-        <div class='table-row'>
-            <h2> Contact Us </h2>
+        <div id="photos">
+            <span class="photos-section">
+                <img src="images/workin_2.jpg" 
+                style="float:left;width:33.33%;height:270px">
+            </span>
+            <span class="photos-section">
+                <img src="images/workin_14.jpg" u
+                style="float:left;width:33.33%;height:270px">
+            </span>
+            <span class="photos-section">
+                <img src="images/workin_18.jpg"
+                style="float:left;width:33.33%;height:270px">
+            </span>
+            <span class="photos-section">
+                <img src="images/workin_7.jpg" 
+                style="float:left;width:33.33%;height:270px">
+            </span>
+            <span class="photos-section">
+                <img src="images/workin_10.jpg" 
+                style="float:left;width:33.33%;height:270px">
+            </span>
+            <span class="photos-section">
+                <img src="images/workin_15.jpg" 
+                style="float:left;width:33.33%;height:270px">
+            </span>
+        </div>
+
+
+
+        <div class='table-row gray-background' id="contact-us">
+            <h2>Contact Us</h2>
 
             <div class="mapbox" id="googleMap"></div>
 
             <div class="box">
-                Email: contact@workin.com <br>
-                Phone number: (787)555-5555 <br>
-                Address: Calle 34, Edificio 4, 3er piso <br>
-                Ave. Munoz Rivera <br>
-                San Juan, PR 00901 <br>
+                E-mail: <br>
+                <a href="mailto:workin.suites@gmail.com" 
+                    target="_top">workin.suites@gmail.com
+                </a> <br><br>
+                Phone number: <br>
+                (787) 249-7373 <br><br>
+                Ave. Munoz Rivera 898 <br>
+                Suite 301 <br>
+                San Juan, PR 00927 <br><br>
+
+                <div> Like us on: &nbsp
+                    <a href="https://www.facebook.com" target="_blank"><img
+                    src="icons/facebook.png" height="30" width="30" alt="facebook
+                    icon"/></a>
+                </div>
             </div>
         </div>
 
     </div>
 
-    <div class='footer'>
-        <h3 id='follow-us'> Follow us on: </h3>
-        <div> 
-            <a href="https://www.facebook.com" target="_blank"><img
-                src="icons/facebook.png" height="50" width="50" alt="facebook                          icon"/></a> 
-            <a href="https://www.instagram.com" target="_blank"><img 
-                src="icons/instagram.png" height="50" width="50" 
-                alt="instagramicon"/></a>
-            <a href="https://www.twitter.com" target="_blank"><img 
-                src="icons/twitter.png" height="50" width="50" alt="twitter 
-                icon"/></a>
-        </div>
+    <div class='footer green-background'>
+        <p class='footer-text'> Copyright &copy 2018, WorkIn. All Rights Reserved. 
+        </p>
     </div>
 
     <!-- Load jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
 
     <script>
       
@@ -143,22 +215,13 @@
 
           $('html, body').animate({
               scrollTop: $($.attr(this, 'href')).offset().top
-          }, 500);
+          }, 1000);
       });
       
         window.onscroll = function() {stickyOnTop()};
 
         var header = document.getElementById("entire-website-header");
         var sticky = header.offsetTop;
-
-        function stickyOnTop() {
-            if (window.pageYOffset > sticky) {
-                header.classList.add("sticky");
-            } else {
-                header.classList.remove("sticky");
-            }
-        }
-        
 
         var slideIndex = 0;
         showSlides();
@@ -177,6 +240,14 @@
             }
             slides[slideIndex-1].style.display = "block";  
             setTimeout(showSlides, 4000); // Change image every 4 seconds
+        }
+
+        function stickyOnTop() {
+            if (window.pageYOffset >= sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
         }
     </script>
 
