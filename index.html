@@ -1,14 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width,
-        initial-scale=1"> 
+        initial-scale=1.0"> 
     <title>WorkIn</title>
-    <link type="text/css"
-          rel="stylesheet"
-          href="style.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114"
+        href="icons/fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"
+        href="icons/fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144"
+        href="icons/fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152"
+        href="icons/fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="icons/fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"
+        href="icons/fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="icons/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"
+        href="icons/fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="icons/fav/favicon-16x16.png">
+    <link rel="manifest" href="icons/fav/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icons/fav/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+    <script> 
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideToggle("slow");
+            });
+        });
+    </script>
 </head>
 
 
@@ -16,7 +51,7 @@
     <nav id="entire-website-header"> 
         <h1>
         <div class='logo-image'><a href="https://www.google.com"><img 
-            src="icons/logo.png"/ height="65" width="165"></a>
+            src="icons/logo.png" height="65" width="165"></a>
         </div>
 
         <div class='right-header-bar'>
@@ -29,6 +64,15 @@
         </h1>
     </nav>
 
+    <nav hidden id="entire-website-header-mobile">
+        <div id="flip">
+            <div class='logo-image'><a href="https://www.google.com"><img
+                src="icons/logo.png" height="32" width="82"></a>
+            </div>
+        </div>
+
+        <div id="panel">Hello world!</div>
+    </nav>
 
     <div class='content'>
         <div class="table-row slideshow-container">
@@ -54,15 +98,19 @@
 
         
         <div class='table-row black-background' id="about-us">
-        <h2>About Us</h2>
-        <p class='normal-padding'> We are a community of developers, graphic
-            designers, salespeople, consultants, lawyers, accountants and appraiser
-            that want to create a welcoming environment for startups to thrive in.
-            We are new in the community, being established in August 2018. Located
-            at Ave. Munoz Rivera, we work closely with students from the University
-            of Puerto Rico and the community of Rio Piedras to provide the facilities
-            needed to grow successful businesses and pursue their endeavours. 
-        </p>
+
+            <h2>About Us</h2>
+            <p id='lowbar'>&#x2581;</p>
+
+            <p class='normal-padding'> We are a community of developers, graphic
+                designers, salespeople, consultants, lawyers, accountants and 
+                appraiser that want to create a welcoming environment for startups 
+                to thrive in. We are new in the community, being established in 
+                August 2018. Located at Ave. Munoz Rivera, we work closely with 
+                students from the University of Puerto Rico and the community 
+                of Rio Piedras to provide the facilities needed to grow
+                successful businesses and pursue their endeavours. 
+            </p>
         </div>
  
 
@@ -70,6 +118,7 @@
         <div class='container table-row gray-background' id="facilities-and-perks">
 
             <h2>Facilities and Perks</h2>
+            <p id='lowbar'>&#x2581;</p>
             
             <div>
                 <div class="perk-box">
@@ -117,10 +166,11 @@
 
         <div class='table-row black-background' id="prices"> 
             <h2>Prices</h2>
+            <p id='lowbar'>&#x2581;</p>
 
             <div class="pricing-box box1">
                 <h3 id='option-pricing-title'>Co-Working</h3>
-                <p id='starting-at'>Starting at:</p>
+                <p id='starting-at'>Price:</p>
                 <p id='starting-price'> $150 </p>
                 <p> 
                     Ave. Munoz Rivera 898 <br>
@@ -175,6 +225,7 @@
 
         <div class='table-row gray-background' id="contact-us">
             <h2>Contact Us</h2>
+            <p id='lowbar'>&#x2581;</p>
 
             <div class="mapbox" id="googleMap"></div>
 
@@ -185,14 +236,14 @@
                 </a> <br><br>
                 Phone number: <br>
                 (787) 249-7373 <br><br>
-                Ave. Munoz Rivera 898 <br>
+                Ave. Mu&ntildeoz Rivera 898 <br>
                 Suite 301 <br>
                 San Juan, PR 00927 <br><br>
 
                 <div> Like us on: &nbsp
-                    <a href="https://www.facebook.com" target="_blank"><img
-                    src="icons/facebook.png" height="30" width="30" alt="facebook
-                    icon"/></a>
+                    <a href="https://www.facebook.com/workinpr/" target="_blank">
+                    <img src="icons/facebook.png" height="30" width="30"
+                    alt="facebook icon"/></a>
                 </div>
             </div>
         </div>
@@ -204,19 +255,18 @@
         </p>
     </div>
 
-    <!-- Load jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
     </script>
 
     <script>
       
-      $(document).on('click', 'a[href^="#"]', function (event) {
-          event.preventDefault();
+        $(document).on('click', 'a[href^="#"]', function (event) {
+            event.preventDefault();
 
-          $('html, body').animate({
-              scrollTop: $($.attr(this, 'href')).offset().top
-          }, 1000);
-      });
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 1000);
+        });
       
         window.onscroll = function() {stickyOnTop()};
 
