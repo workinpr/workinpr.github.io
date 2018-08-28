@@ -1,1 +1,1 @@
-WorkIn PR website. This repo is the source for WorkIn's website, viewable at workinpr.github.io 
+Author: velezjose. This repo is the source for WorkIn's website, viewable at https://workinpr.github.io 
