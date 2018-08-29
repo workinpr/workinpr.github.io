@@ -57,7 +57,7 @@
             src="icons/logo.png" height="65" width="165"></a>
         </div>
 
-        <div class='right-header-bar'>
+        <div id='right-header-bar' class='right-header-bar'>
             <a href="#top" class="button">Home</a>
             <a href="#about-us" class="button">About Us</a>
             <a href="#facilities-and-perks" class="button">Facilities and Perks</a>
@@ -241,8 +241,7 @@
 
                 <div> Like us on: &nbsp
                     <a href="https://www.facebook.com/workinpr/" target="_blank">
-                    <img src="icons/facebook.png" height="30" width="30"
-                    alt="facebook icon"/></a>
+                    <img src="icons/facebook.png" height="30" width="30"/></a>
                 </div>
             </div>
         </div>
@@ -291,7 +290,7 @@
             setTimeout(showSlides, 4000); // Change image every 4 seconds
         }
 
-        function toggleTopNav() {
+        function toggleTopnav() {
             var x = document.getElementById("myTopnav");
             if (x.className === "topnav") {
                 x.className += " responsive";
