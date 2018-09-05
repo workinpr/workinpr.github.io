@@ -280,7 +280,6 @@ p, ol, ul {
 @media screen and (max-width:955px) {
     .mapbox {
         height: 350px;
-        width: 350px;
         margin: auto;
     }
 
@@ -295,20 +294,20 @@ p, ol, ul {
 
 /* For desktop/laptop version of website. */
 @media screen and (min-width:955px) {
-    .mapbox {
-        width: 40%;
-        height: 250px;
-        float: left;
-        margin: 0;
-        padding: 0;
-    }
-
     .contact-info-box {
         width: 40%;
         float: left;
         font-size: 80%;
         margin: 0;
         padding: 40px 30px 100px 60px;
+    }
+
+    .mapbox {
+        width: 40%;
+        height: 250px;
+        float: left;
+        margin: 0;
+        padding: 30px 30px;
     }
 }
 
