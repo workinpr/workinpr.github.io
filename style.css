@@ -129,9 +129,9 @@ img {
     margin: 0;
     padding: 0; 
     top: 0;
-    color: #47b075;
 }
 
+/* For mobile screens. */
 .introduction-text {
     top: 20vh;
     width: 80%;
@@ -152,6 +152,9 @@ img {
     }
 } 
 
+.introduction-text {
+    border-radius: 5px;
+}
 /* All h2's have this styling. */
 h2 {
     color: #47b075;
@@ -167,22 +170,31 @@ h2 {
     padding: 20px 0px 15px 0px;
 }
 
-p, ol, ul {
-    color: #696969; /* This number is pure coincidence ;D */
+p, ul {
+    color: #a5a5a5; /* This number is pure coincidence ;D */
     text-align: center;
-    font-size: 70%;
+    font-size: 73%;
 }
 
 
 /* Mobile friendly responsive Facilities and Perks section. */
 /* (For phones and tablets) */
 @media screen and (max-width:910px) {
+    /* Reduces the amount of padding in the bottom for better view 
+       in mobile devices. Also used in the Contact Us section. */
+    .table-row-perks {
+        background-color: none;
+        width: 80%;
+        padding: 80px 10% 15px 10%;
+        clear: both;
+    }
+
     .perk-box {
         font-size: calc(14px + 12 * ((100vw - 300px) / 1300));
         text-align: center;
         height: 150px;
         width: 200px;
-        padding: 30px 10px 0px 10px;
+        padding: 55px 10px 0px 10px;
     }
 
     .pb1, .pb3, .pb5, .pb7 {
@@ -190,9 +202,17 @@ p, ol, ul {
         margin: auto;
     }
 
+    .pb1:hover, .pb3:hover, .pb5:hover, .pb7:hover {
+        background-color: #d2d2d2;
+    }
+
     .pb2, .pb4, .pb6, .pb8 {
         background-color: #47b075;
         margin: auto;
+    }
+
+    .pb2:hover, .pb4:hover, .pb6:hover, .pb8:hover {
+        background-color: #68c290;
     }
 
     .perk-text {
@@ -201,7 +221,7 @@ p, ol, ul {
 }
 
 /* Desktop/laptop Facilities and Perks section. */
-@media screen and (min-width:910px) {
+@media screen and (min-width:911px) {
     .perk-box {
         width: 19.5%;
         height: 130px;
@@ -211,11 +231,18 @@ p, ol, ul {
         font-size: calc(14px + 12 * ((100vw - 300px) / 1300));
     }
 
+    .pb1:hover, .pb3:hover, .pb6:hover, .pb8:hover {
+        background-color: #d2d2d2;
+    }
+
     .pb2, .pb4, .pb5, .pb7 {
         background-color: #47b075;
     }
-}
 
+    .pb2:hover, .pb4:hover, .pb5:hover, .pb7:hover {
+        background-color: #68c290;
+    }
+}
 
 .extra-bottom-border-perks {
     border: 150px solid #e9e9e9;
@@ -224,46 +251,111 @@ p, ol, ul {
     border-right-style: none;
 }
 
-.extra-bottom-border-pricing {
-    border: 110px solid #191919;
+/* Mobile friendly, responsive version of Prices section. */
+/* (For phones/tablets) */
+@media screen and (max-width:949px) {
+    .table-row-prices {
+        padding: 5%; 
+    }
+    .pricing-box {
+        width: 90%;
+        margin: auto;
+        clear: both;
+        padding: 20px;
+    }
+
+    #price-description {
+        padding: 20px;
+    }
+
+    .pricing-box-1 {
+        border: #e9e9e9 1px solid;
+    }
+
+    .pricing-box-2 {
+        border: #e9e9e9 1px solid;
+        border-top-style: none;
+    }
 }
 
-.pricing-box {
-    width: 40%;
-    float: left;
-    background-color: #191919;
-    padding: 1% 5% 4% 4%;
-    text-align: center;
-    border: #e9e9e9 1px solid;
-    border-bottom-style: none;
-    border-top-style: none;
-}
 
-.no-left-border {
-    border-left-style: none;
+/* For desktop/laptop version of Prices section. */
+@media screen and (min-width:950px) {
+    .table-row-prices {
+        background-color: none;
+        width: 80%;
+        padding: 80px 10% 25px 10%;
+        clear: both;
+    }
+
+    .pricing-box {
+        width: 40%;
+        float: left;
+        padding: 3% 5% 4% 4%;
+        border: #e9e9e9 1px solid;
+        border-bottom-style: none;
+        border-top-style: none;
+    }
+
+    .pricing-box-2 {
+        border-left-style: none;
+    }
+
+    #price-description {
+        padding: 30px;
+    }
+
+    .pricing-more-padding {
+        padding: 180px 0px 0px 0px;
+    }
+
+    #ref {
+        clear: both;
+        padding: 0px;
+        margin: 0px;
+        color: #191919;
+    }
 }
 
 #price-description {
-    padding: 30px;
     color: #47b075;
 }
 
 #option-pricing-title {
     color: white;
-    font-size: 50px;
+    font-size: calc(40px + 12 * ((100vw - 300px) / 1300));
 }
 
 #starting-price {
     padding: 5px 0px 20px 0px;
     font-size: 50px;
-    color: #ffff4c;
+    color: #ffff81;
+    text-align: center;
 }
 
-@media screen and (max-width:1000px) {
-    .pricing-box {
-        width: %;
-        padding: 1% 2.5% 4% 2.5%;
-    }
+.pricing-box {
+    text-align: center;
+    background-color: #191919;
+}
+
+.pricing-more-padding {
+    color: #191919;
+    padding: 40px 0px;
+}
+
+.pricing-box-1:hover, .pricing-box-2:hover {
+    background-color: #262626;        
+}
+
+ul {
+    color: #47b075;
+    list-style: none;
+    text-align: left;
+    padding-left: 60px;
+}
+
+ul li:before {
+    content: '✓';
 }
 
 #photos {
