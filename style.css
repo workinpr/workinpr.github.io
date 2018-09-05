@@ -300,7 +300,7 @@ p, ol, ul {
         height: 250px;
         float: left;
         margin: 0;
-        padding: 40px 30px;
+        padding: 0;
     }
 
     .contact-info-box {
