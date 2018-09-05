@@ -133,7 +133,7 @@ img {
 }
 
 .introduction-text {
-    top: 40vh;
+    top: 20vh;
     width: 80%;
     left: 10vw;
     text-align: center;
@@ -143,6 +143,14 @@ img {
     padding: 20px 0px;
     background-color: rgba(255,255,255,0.4);
 }
+
+/* For desktop screens. */
+@media screen and (min-width:680px) {
+    .introduction-text {
+        font-size: calc(22px + 12 * ((100vw - 300px) / 1300));
+        top: 40vh;
+    }
+} 
 
 /* All h2's have this styling. */
 h2 {
