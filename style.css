@@ -2,7 +2,7 @@
 body {
     background-color: #e9e9e9;
     font-family: Avenir, Geneva, Arial, sans-serif;
-    font-size: calc(20px + 12 * ((100vw - 300px) / 1300));
+    font-size: calc(22px + 12 * ((100vw - 300px) / 1300));
 }
 
 * {
@@ -175,29 +175,24 @@ p, ol, ul {
 
 
 /* Mobile friendly responsive Facilities and Perks section. */
+/* (For phones and tablets) */
 @media screen and (max-width:910px) {
     .perk-box {
         font-size: calc(14px + 12 * ((100vw - 300px) / 1300));
         text-align: center;
         height: 150px;
-        width: 150px;
-        padding: 22px 10px 0px 10px;
+        width: 200px;
+        padding: 30px 10px 0px 10px;
     }
 
     .pb1, .pb3, .pb5, .pb7 {
         background-color: #e9e9e9;
-        clear: left;
-        float: left;
-        margin-left: calc(25vw - 170px);
+        margin: auto;
     }
 
     .pb2, .pb4, .pb6, .pb8 {
-        clear: right;
-        float: left;
-    }
-
-    .pb2, .pb3, .pb6, .pb7 {
         background-color: #47b075;
+        margin: auto;
     }
 
     .perk-text {
