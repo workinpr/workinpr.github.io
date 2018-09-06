@@ -7,6 +7,8 @@
         initial-scale=1.0"> 
     <title>WorkIn</title>
     <link type="text/css" rel="stylesheet" href="style.css">
+
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -36,22 +38,12 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="icons/fav/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-        </script>
-    <script> 
-        $(document).ready(function(){
-            $("#flip").click(function(){
-                $("#panel").slideToggle("slow");
-            });
-        });
-    </script>
 </head>
 
 
 <body>
     <div class="topnav" id="myTopnav"> 
-        <a class='logo-image active' id="first-child" 
+        <a class='logo-image' id="first-child" 
             href="https://www.google.com"><img 
             src="icons/logo.png" height="65" width="165"></a>
         <a href="#contact-us" class="button">Contact Us</a>
@@ -59,10 +51,20 @@
         <a href="#facilities-and-perks" class="button">Facilities and Perks</a>
         <a href="#about-us" class="button">About Us</a>
         <a href="#top" class="button">Home</a>
+        <a href="javascript:void(0);" class="hamburger" onclick="openNav();"> 
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
 
-        <a href="javascript:void(0);" id="toggle-button" class="icon"
-            onclick="toggleTopnav()">
-            <i class="fa fa-bars"></i></a>
+    <div hidden id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn"
+            onclick="closeNav()">&times;</a>
+        <a href="#top" onclick="closeNav();">Home</a>
+        <a href="#about-us" onclick="closeNav();">About Us</a>
+        <a href="#facilities-and-perks" onclick="closeNav();">Facilities and 
+            Perks</a>
+        <a href="#prices" onclick="closeNav();">Prices</a>
+        <a href="#contact-us" onclick="closeNav();">Contact Us</a>
     </div>
 
 
@@ -94,7 +96,7 @@
 
             <p> We are a community of developers, graphic
                 designers, salespeople, consultants, lawyers, accountants and 
-                appraiser that want to create a welcoming environment for startups 
+                appraisers that want to create a welcoming environment for startups 
                 to thrive in. We are new in the community, being established in 
                 August 2018. Located at Ave. Munoz Rivera, we work closely with 
                 students from the University of Puerto Rico and the community 
@@ -171,7 +173,7 @@
                 </p>
                 <p id='price-description' class='less-bottom-padding'>
                     All perks are included. Just drop-in and <em>get
-                    WorkIn'</em>.
+                    WorkIn</em>.
                 </p>
             </div> 
 
@@ -272,13 +274,12 @@
             setTimeout(showSlides, 4000); // Change image every 4 seconds
         }
 
-        function toggleTopnav() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
         }
     </script>
 
