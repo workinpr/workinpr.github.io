@@ -29,10 +29,14 @@ body {
     font-size: 20px;
 }
 
+.hidden {
+    display: none;
+}
+
 /* Don't display the three-horizontal-barred hamburger. Only display it when
    width is less than 1020. */
 @media screen and (min-width: 1021px) {
-    .hamburger {
+    .hamburger, .hidden {
         display: none;
     }
 
@@ -56,8 +60,8 @@ body {
     }
 
     .sidenav {
-        display: block;
         z-index: 1;
+        display: none;
         right: 0;
         height: 100%;
         background-color: #000000;
@@ -68,7 +72,6 @@ body {
     }
 
     .sidenav a {
-        padding: 8px 8px 8px 32px;
         text-decoration: none;
         display: block;
         background-color: #000000;
@@ -101,6 +104,15 @@ body {
         position: absolute;
         top: 5px;
         right: 5px;
+    }
+
+    #navbar-footer, .sidenav a {
+        padding: 8px 15px 8px 32px;
+        text-align: left;
+    }
+
+    #navbar-footer {
+        font-size: calc(10px + 12 * ((100vw - 300px) / 1300));
     }
 }
 
