@@ -186,7 +186,9 @@ img {
 
 /* For iPhone 6 portrait. */
 @media screen and (max-width:413px) {
-    top: 15vh;
+    .introduction-text {
+        top: 15vh;
+    }   
 }
 
 
