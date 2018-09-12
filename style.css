@@ -200,7 +200,7 @@ img {
     font-size: calc(25px + 12 * ((100vw - 300px) / 1300));
     color: black;
     padding: 20px 0px;
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(255,255,255,0.55);
     border-radius: 5px;
 }
 
