@@ -25,7 +25,7 @@ body {
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
-    padding: 26px 44px 0px 10px; 
+    padding: 26px 44px 0px 10px;
     font-size: 20px;
 }
 
@@ -180,11 +180,17 @@ img {
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 0; 
+    padding: 0;
     top: 0;
 }
 
-/* For mobile screens. */
+/* For iPhone 6 portrait. */
+@media screen and (max-width:413px) {
+    top: 15vh;
+}
+
+
+/* For mobile screens (but not iPhone 6 portrait). */
 .introduction-text {
     top: 20vh;
     width: 80%;
@@ -195,19 +201,17 @@ img {
     color: black;
     padding: 20px 0px;
     background-color: rgba(255,255,255,0.4);
+    border-radius: 5px;
 }
 
 /* For desktop screens. */
-@media screen and (min-width:410px) {
+@media screen and (min-width:660px) {
     .introduction-text {
-        font-size: calc(22px + 12 * ((100vw - 300px) / 1300));
+        font-size: calc(30px + 12 * ((100vw - 300px) / 1300));
         top: 40vh;
     }
-} 
-
-.introduction-text {
-    border-radius: 5px;
 }
+
 /* All h2's have this styling. */
 h2 {
     color: #47b075;
@@ -233,7 +237,7 @@ p, ul {
 /* Mobile friendly responsive Facilities and Perks section. */
 /* (For phones and tablets) */
 @media screen and (max-width:910px) {
-    /* Reduces the amount of padding in the bottom for better view 
+    /* Reduces the amount of padding in the bottom for better view
        in mobile devices. Also used in the Contact Us section. */
     .table-row-perks {
         background-color: none;
@@ -280,7 +284,7 @@ p, ul {
         height: 130px;
         padding: 50px 20px 10px 20px;
         float: left;
-        text-align: center;    
+        text-align: center;
         font-size: calc(14px + 12 * ((100vw - 300px) / 1300));
     }
 
@@ -308,7 +312,7 @@ p, ul {
 /* (For phones/tablets) */
 @media screen and (max-width:949px) {
     .table-row-prices {
-        padding: 80px 5% 50px 5%; 
+        padding: 80px 5% 50px 5%;
     }
     .pricing-box {
         width: 90%;
@@ -400,7 +404,7 @@ p, ul {
 }
 
 .pricing-box-1:hover, .pricing-box-2:hover {
-    background-color: #262626;        
+    background-color: #262626;
 }
 
 ul {
@@ -427,12 +431,12 @@ ul li:before {
     }
 }
 
-/* Having 3 photos per line in bigger screens. */ 
+/* Having 3 photos per line in bigger screens. */
 @media screen and (min-width:911px) {
     #extra-photos {
         float:left;
         width:33.33%;
-        height:auto; 
+        height:auto;
     }
 }
 
