@@ -469,7 +469,7 @@ ul li:before {
         float: left;
         font-size: 80%;
         margin: 0;
-        padding: 40px 30px 100px 60px;
+        padding: 0px 30px 100px 60px;
     }
 
     .mapbox {
