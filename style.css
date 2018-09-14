@@ -42,6 +42,7 @@ body {
 
     .sticky {
         background-color: rgba(255,255,255,0.8);
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
     }
 }
 
@@ -144,6 +145,7 @@ a:active {
 .sticky {
     position: fixed;
     background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
     top: 0;
     z-index: 1;
     width: 100%;
@@ -431,7 +433,7 @@ p, ul {
 #starting-price {
     padding: 5px 0px 20px 0px;
     font-size: 50px;
-    color: #ffff81;
+    color: #ffff81; /* This is a yellow color. */
     text-align: center;
 }
 
