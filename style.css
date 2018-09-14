@@ -208,6 +208,47 @@ img {
     }
 }
 
+/* No display of the downward-pointing arrow when width is greater than 1011px
+   because it does not look nice! */
+@media screen and (max-width:1011px) {
+    .arrow-to-content {
+        display: none;
+    }
+}
+
+/* Display when screen greater than 1012px! */
+@media screen and (min-width:1012px) {
+    .arrow-to-content {
+        position: relative;
+        bottom: calc((2 / 5) * (100vw - 868px));
+    }
+
+    @keyframes bouncing {
+        0% {bottom: 0;}
+        50% {bottom: 20px;}
+        100% {bottom: 0;}
+    }
+
+    .arrow {
+        animation: bouncing 1s infinite ease-in-out;
+        left: 50%;
+        position: absolute;
+    }
+
+    .arrow a:link {
+        color: white;
+    }
+
+    .arrow a:hover {
+        color: #47b075;
+        text-decoration: none;
+    }
+
+    .arrow a:active {
+        text-decoration: none;
+    }
+}
+
 /* All h2's have this styling. */
 h2 {
     color: #47b075;
@@ -224,7 +265,7 @@ h2 {
 }
 
 p, ul {
-    color: #a5a5a5; /* This number is pure coincidence ;D */
+    color: #a5a5a5;
     text-align: center;
     font-size: 73%;
 }
