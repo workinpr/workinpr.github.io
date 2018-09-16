@@ -508,7 +508,7 @@ ul li:before {
     font-size: 80%;
 }
 
-.introduction-text, h2, p, ul, #starting-price, .pricing-box, .footer {
+.introduction-text, h2, p, #starting-price, .pricing-box, .footer {
     text-align: center;
 }
 
