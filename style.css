@@ -54,7 +54,6 @@ body {
     .sidenav a {
         display: block;
         background-color: #000000;
-        font-color: #e9e9e9;
         font-size: calc(20px + 12 * ((100vw - 300px) / 1300));
         transition: 0.3s;
     }
@@ -121,7 +120,6 @@ a:hover, a:active {
 
 /* The different sections of the website are table-row classes. */
 .table-row {
-    background-color: none;
     width: 80%;
     padding: 80px 10% 28% 10%;
 }
@@ -235,7 +233,6 @@ p, ul {
     /* Reduces the amount of padding in the bottom for better view
        in mobile devices. Also used in the Contact Us section. */
     .table-row-perks {
-        background-color: none;
         width: 80%;
         padding: 80px 10% 15px 10%;
         clear: both;
@@ -317,7 +314,7 @@ p, ul {
         clear: both;
     }
 
-    .pricing-box, #price-description {
+    .pricing-box, .price-description {
         padding: 20px;
     }
 
@@ -342,7 +339,6 @@ p, ul {
 /* For desktop/laptop version of Prices section. */
 @media screen and (min-width:950px) {
     .table-row-prices {
-        background-color: none;
         width: 80%;
         padding: 80px 10% 25px 10%;
     }
@@ -360,7 +356,7 @@ p, ul {
         border-left-style: none;
     }
 
-    #price-description {
+    .price-description {
         padding: 30px;
     }
 
@@ -379,16 +375,16 @@ p, ul {
     }
 }
 
-#price-description {
+.price-description {
     color: #47b075;
 }
 
-#option-pricing-title {
+.option-pricing-title {
     color: white;
     font-size: calc(40px + 12 * ((100vw - 300px) / 1300));
 }
 
-#starting-price {
+.starting-price {
     padding: 5px 0px 20px 0px;
     font-size: 50px;
     color: #ffff81; /* This is a yellow color. */
@@ -422,19 +418,20 @@ ul li:before {
 
 /* Making photos bigger for mobile devices .*/
 @media screen and (max-width:910px) {
-    #extra-photos {
+    .extra-photos {
         width: 50%;
     }
 }
 
+
 /* Having 3 photos per line in bigger screens. */
 @media screen and (min-width:911px) {
-    #extra-photos {
+    .extra-photos {
         width: 33.33%;
     }
 }
 
-#extra-photos {
+.extra-photos {
     float: left;
     height: auto;
 }
@@ -508,7 +505,7 @@ ul li:before {
     font-size: 80%;
 }
 
-.introduction-text, h2, p, #starting-price, .pricing-box, .footer {
+.introduction-text, h2, p, .starting-price, .pricing-box, .footer {
     text-align: center;
 }
 
