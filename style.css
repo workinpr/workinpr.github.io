@@ -144,6 +144,7 @@ img {
     width: 100%;
     height: 100%;
     top: 0;
+    margin: 0;
 }
 
 /* For mobile screens. */
@@ -439,6 +440,13 @@ ul li:before {
 *, .slideshow-container, #photos, .photos-section {
     padding: 0;
     margin: 0;
+}
+
+@media screen and (max-width:801px) {
+    .slideshow-container {
+        padding-top: 78px;
+    }
+
 }
 
 /* Making map responsive and mobile friendly. */
