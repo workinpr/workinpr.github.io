@@ -150,7 +150,7 @@ img {
 /* For mobile screens. */
 @media screen and (max-width:659px) {
     .introduction-text {
-        top: 23vh;
+        top: 25vh;
         font-size: calc(27px + 12 * ((100vw - 300px) / 1300));
     }
 }
