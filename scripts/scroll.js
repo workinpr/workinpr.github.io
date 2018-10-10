@@ -5,5 +5,3 @@
                 scrollTop: $($.attr(this, 'href')).offset().top
             }, 1000);
         });
-
-        window.onscroll = function() {stickyOnTop()};
