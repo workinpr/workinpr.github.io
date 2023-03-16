@@ -323,14 +323,7 @@ p, ul {
         border: #e9e9e9 1px solid;
         border-left-style: none;
         border-right-style: none;
-    }
-
-    .pricing-box-2 {
-        border: #e9e9e9 1px solid;
-        border-top-style: none;
-        border-left-style: none;
-        border-right-style: none;
-    }
+    }s
 
     .pricing-more-padding {
         padding: 40px 0px;
@@ -345,16 +338,11 @@ p, ul {
     }
 
     .pricing-box {
-        width: 40%;
-        float: left;
+        /* width: 40%; */
         padding: 3% 5% 4% 4%;
         border: #e9e9e9 1px solid;
         border-bottom-style: none;
         border-top-style: none;
-    }
-
-    .pricing-box-2 {
-        border-left-style: none;
     }
 
     .price-description {
@@ -428,7 +416,7 @@ ul li:before {
 /* Having 3 photos per line in bigger screens. */
 @media screen and (min-width:911px) {
     .extra-photos {
-        width: 33.33%;
+        width: 33.32%;
     }
 }
 
@@ -446,7 +434,6 @@ ul li:before {
     .slideshow-container {
         padding-top: 78px;
     }
-
 }
 
 /* Making map responsive and mobile friendly. */
