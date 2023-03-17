@@ -70,9 +70,7 @@
             Perks</a>
         <a href="#prices" onclick="closeNav();">Prices</a>
         <a href="#contact-us" onclick="closeNav();">Contact Us</a>
-        <p id="navbar-footer">
-            Copyright &copy; 2019, WorkIn. All Rights Reserved.
-        </p>
+        <p id="navbar-footer"></p>
     </div>
 
 
@@ -136,8 +134,8 @@
             <h2>Facilities and Perks</h2>
             <p class="lowbar">&#x2594;</p>
             <div class="perk-box pb1">
-                <div><img src="icons/fully-furnished.png" alt="desk icon"></div>
-                <div class="perk-text">Fully Furnished</div>
+                <div><img src="icons/excellent-location.png" alt="Location pin / balloon icon"></div>
+                <div class="perk-text">Excellent location</div>
             </div>
 
             <div class="perk-box pb2">
@@ -167,8 +165,8 @@
                 <div class="perk-text">Parking</div>
             </div>
             <div class="perk-box pb7">
-                <div><img src="icons/coffee.png" alt="Coffee mug icon"></div>
-                <div class="perk-text">Coffee</div>
+                <div><img src="icons/networking.png" alt="Networking icon"></div>
+                <div class="perk-text">Networking</div>
             </div>
             <div class="perk-box pb8">
                 <div><img src="icons/copiers.png" alt="Printer icon"></div>
@@ -296,8 +294,9 @@
         }
 
         const closeNav = () => document.getElementById("mySidenav").style.width = "0"
-
-        document.getElementById('footer-text-id').innerText = "Copyright © " + new Date().getFullYear() + ", WorkIn. All Rights Reserved."
+        const copyRightText = "Copyright © " + new Date().getFullYear() + ", WorkIn. All Rights Reserved."
+        document.getElementById('footer-text-id').innerText = copyRightText
+        document.getElementById('navbar-footer').innerText = copyRightText
     </script>
 
     <script src="scripts/googlemaps.js"></script>
