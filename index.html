@@ -268,9 +268,9 @@
     <script src="scripts/scroll.js"></script>
 
     <script>
-        var header = document.getElementById("myTopnav");
-        var sticky = header.offsetTop;
-        var slideIndex = 0;
+        let header = document.getElementById("myTopnav");
+        let sticky = header.offsetTop;
+        let slideIndex = 0;
         showSlides();
         function showSlides() {
             let slides = document.getElementsByClassName("slideshow")
@@ -300,7 +300,10 @@
     </script>
 
     <script src="scripts/googlemaps.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgJdXBPvMtuJ8UT4SB_EbSkNfbj7zUNFA&callback=myMap"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqgIiXQRV_7FuVQwwlUop2kYW7x_xV_Hc&callback=initMap"
+        defer
+    ></script>
 
 </body>
 
