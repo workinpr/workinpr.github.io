@@ -415,7 +415,7 @@ ul li:before {
 /* Having 3 photos per line in bigger screens. */
 @media screen and (min-width:911px) {
     .extra-photos {
-        width: 33.32%;
+        width: 33.33%;
     }
 }
 
@@ -424,7 +424,7 @@ ul li:before {
     height: auto;
 }
 
-*, .slideshow-container, #photos, .photos-section {
+*, .slideshow-container, #photos-mobile, #photos-desktop, .photos-section {
     padding: 0;
     margin: 0;
 }
@@ -507,6 +507,6 @@ ul li:before {
     color: black;
 }
 
-.table-row, #photos, .footer {
+.table-row, #photos-mobile, #photos-desktop, .footer {
     clear: both;
 }

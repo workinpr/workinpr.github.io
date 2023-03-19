@@ -204,7 +204,7 @@
 
 
 
-        <div id="photos" class="black-background minimum-width">
+        <div id="photos-desktop" class="black-background minimum-width">
             <span class="photos-section">
                 <img src="images/mobile-images/workin_8-web.jpg"
                 class="extra-photos"
@@ -231,6 +231,35 @@
                 alt="Empty suite ready to be furnished" class="extra-photos">
             </span>
         </div>
+
+        <div id="photos-mobile" class="black-background minimum-width">
+            <span class="photos-section">
+                <img src="images/mobile-images/workin_2023-03-15-conference-room-web.jpg"
+                alt="Workin spacious conference room" class="extra-photos">
+            </span>
+            <span class="photos-section">
+                <img src="images/mobile-images/workin_14-web.jpg"
+                alt="Suite desk layout and setup" class="extra-photos">
+            </span>
+            <span class="photos-section">
+                <img src="images/mobile-images/workin_2023-03-15-lideres-web.jpg"
+                alt="Líderes online school" class="extra-photos">
+            </span>
+            <span class="photos-section">
+                <img src="images/mobile-images/workin_2023-03-15-common-area.jpg"
+                alt="Workin suites nice common area with industrial printer" class="extra-photos">
+            </span>
+            <span class="photos-section">
+                <img src="images/mobile-images/workin_15-web.jpg"
+                alt="Empty suite ready to be furnished" class="extra-photos">
+            </span>
+            <span class="photos-section">
+                <img src="images/mobile-images/workin_8-web.jpg"
+                class="extra-photos"
+                alt="Lounge desk with a MacBook Pro on top">
+            </span>
+        </div>
+
 
 
         <div class='table-row-contact-us gray-background'>
@@ -297,6 +326,13 @@
         const copyRightText = "Copyright © " + new Date().getFullYear() + ", WorkIn. All Rights Reserved."
         document.getElementById('footer-text-id').innerText = copyRightText
         document.getElementById('navbar-footer').innerText = copyRightText
+
+        const MIN_WIDTH_FOR_DESKTOP_PICS = 911
+        if (document.body.clientWidth >= MIN_WIDTH_FOR_DESKTOP_PICS) {
+            document.getElementById('photos-mobile').remove()
+        } else {
+            document.getElementById('photos-desktop').remove()
+        }
     </script>
 
     <script src="scripts/googlemaps.js"></script>
