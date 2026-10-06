@@ -439,7 +439,8 @@ ul li:before {
 @media screen and (max-width:910px) {
     .table-row-contact-us {
         padding: calc(80px + 100vw) 0 10% 0;
-        width: 100%
+        width: 100%;
+        box-sizing: border-box;
     }
 }
 
@@ -452,11 +453,15 @@ ul li:before {
 
 @media screen and (max-width:954px) {
     .mapbox {
-        height: 350px;
+        width: 100%;
+        height: clamp(320px, 55vh, 420px);
+        padding: 0;
+        border: 0;
+        box-sizing: border-box;
     }
 
     .contact-info-box {
-        padding: 30px 0px;
+        padding: 30px 16px;
         text-align: center;
     }
 }
@@ -470,18 +475,20 @@ ul li:before {
 /* For desktop/laptop version of website. */
 @media screen and (min-width:955px) {
     .contact-info-box {
-        padding: 0px 30px 100px 60px;
+        padding: 0px 24px 60px 40px;
     }
 
     .mapbox {
-        height: 300px;
-        padding: 30px 30px;
+        height: clamp(320px, 32vw, 480px);
+        padding: 0;
+        border: 0;
     }
 
     .contact-info-box, .mapbox {
         float: left;
         margin: 0;
-        width: 40%;
+        width: 50%;
+        box-sizing: border-box;
     }
 }
 
